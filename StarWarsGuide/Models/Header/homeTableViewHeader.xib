@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeTableViewHeader" customModule="StarWarsGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jiT-nI-rtU" userLabel="headerView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star-Wars-Logo-Transparent-PNG" translatesAutoresizingMaskIntoConstraints="NO" id="Unp-dm-qZL" userLabel="logImageView">
+                            <rect key="frame" x="-793" y="11" width="2000" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="FEV-cR-qdf"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="Fhy-hM-D1b"/>
+                        <constraint firstItem="Unp-dm-qZL" firstAttribute="top" secondItem="jiT-nI-rtU" secondAttribute="top" constant="11" id="ctS-LX-YmB"/>
+                        <constraint firstAttribute="bottom" secondItem="Unp-dm-qZL" secondAttribute="bottom" constant="11" id="uWh-sg-cds"/>
+                        <constraint firstItem="Unp-dm-qZL" firstAttribute="centerX" secondItem="jiT-nI-rtU" secondAttribute="centerX" id="y8O-Qz-zF1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="0.90980392156862744" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jiT-nI-rtU" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="150-aa-quK"/>
+                <constraint firstItem="jiT-nI-rtU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2O5-As-awB"/>
+                <constraint firstItem="jiT-nI-rtU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4z8-Kx-MQA"/>
+                <constraint firstItem="jiT-nI-rtU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GQl-Ys-lmk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerView" destination="jiT-nI-rtU" id="JGu-GB-Kop"/>
+            </connections>
+            <point key="canvasLocation" x="168.11594202898553" y="-97.098214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Star-Wars-Logo-Transparent-PNG" width="2000" height="855"/>
+    </resources>
+</document>
