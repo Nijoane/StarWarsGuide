@@ -19,10 +19,6 @@ class ViewController: UIViewController {
                 
         view.backgroundColor = UIColor(red: 255.0/255.0, green: 232.0/255.0, blue: 31.0/255.0, alpha: 1)
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("row selected: \(indexPath.row)")
-    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -44,7 +40,13 @@ extension ViewController: UITableViewDelegate {
         
         return headerView
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "nextViewController", sender: self)
+            
     }
 }
