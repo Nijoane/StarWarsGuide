@@ -47,6 +47,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Tj-OS-Nfq"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="moviesTableView" destination="6jK-zR-eNt" id="3ma-gj-Kn3"/>
                         <segue destination="4Hj-OO-V65" kind="show" identifier="nextViewController" id="Xnp-4w-SmK"/>
@@ -59,21 +60,36 @@
         <!--View Controller-->
         <scene sceneID="CoH-fP-FDq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Uf-Qw-6kg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="4Hj-OO-V65" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aym-ou-pug">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-vX-LJJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rVs-LI-hx3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="trailing" secondItem="rVs-LI-hx3" secondAttribute="trailing" id="3zC-so-YfC"/>
+                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="top" secondItem="rVs-LI-hx3" secondAttribute="top" id="A8B-l4-7z0"/>
+                            <constraint firstAttribute="bottom" secondItem="uEh-vX-LJJ" secondAttribute="bottom" id="EYS-CI-31p"/>
+                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="leading" secondItem="rVs-LI-hx3" secondAttribute="leading" id="pAv-59-Cy3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nda-Dy-QCM"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Uf-Qw-6kg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="82"/>
+            <point key="canvasLocation" x="857.97101449275374" y="81.696428571428569"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
