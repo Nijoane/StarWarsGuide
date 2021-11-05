@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         moviesTableView.backgroundColor = UIColor(red: 255.0/255.0, green: 232.0/255.0, blue: 31.0/255.0, alpha: 1)
                 
         view.backgroundColor = UIColor(red: 255.0/255.0, green: 232.0/255.0, blue: 31.0/255.0, alpha: 1)
+        
+        starWarsAPI().getDataMovies()
     }
 }
 
@@ -31,6 +33,10 @@ extension ViewController: UITableViewDataSource {
         cell.textLabel?.text = "\(indexPath.row)"
         
         return cell
+    }
+    
+    func printDataMovies() {
+        starWarsAPI().getDataMovies()
     }
 }
 
@@ -47,6 +53,6 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "nextViewController", sender: self)
-            
     }
 }
+
