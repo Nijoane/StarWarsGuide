@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
 protocol Displayable {
     var titleLabel: String { get }
     var subtitleLabel: String { get }

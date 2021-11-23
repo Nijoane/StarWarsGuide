@@ -2,10 +2,11 @@
 //  Movies.swift
 //  StarWarsGuide
 //
-//  Created by Nicaely Joane on 05/11/21.
+// Created by Nicaely Joane on 05/11/21.
 //
 
 import Foundation
+import UIKit
 
 struct DataMovies: Decodable {
     let id: Int
@@ -30,7 +31,7 @@ extension DataMovies: Displayable {
         title
     }
     var subtitleLabel: String {
-        "Episode: \(String(id))"
+        "Episode \(String(id))"
     }
     var directorLabel: (label: String, value: String) {
        ("DIRECTOR", director)
@@ -44,5 +45,4 @@ extension DataMovies: Displayable {
     var openingLabel: (label: String, value: String) {
         ("OPENING", openingCrawl)
     }
-    
 }
