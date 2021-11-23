@@ -12,6 +12,7 @@
         <scene sceneID="XeE-8X-nHm">
             <objects>
                 <navigationController id="iRR-9t-b9X" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xnM-Lw-gqe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eNN-oi-iB5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,12 +23,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8I6-mU-od8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-803" y="82"/>
+            <point key="canvasLocation" x="-778" y="82"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StarWarsGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tableViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="StarWarsGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +36,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-zR-eNt">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="166" id="3Gc-qj-uBB" customClass="tableViewCell" customModule="StarWarsGuide" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="166"/>
@@ -44,88 +46,112 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sFr-J8-kni">
-                                                    <rect key="frame" x="16" y="9" width="117" height="149"/>
+                                                    <rect key="frame" x="32" y="9" width="101" height="148"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="117" id="fJ3-Pt-ezW"/>
+                                                        <constraint firstAttribute="height" constant="148" id="Nhp-69-TJJ"/>
+                                                        <constraint firstAttribute="width" constant="101" id="qpF-Lx-EY8"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3W-rY-1qm">
-                                                    <rect key="frame" x="141" y="11" width="43" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3W-rY-1qm">
+                                                    <rect key="frame" x="154" y="8" width="240" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="2N1-sF-zTz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="20"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swY-K3-QOK">
-                                                    <rect key="frame" x="141" y="30" width="69" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swY-K3-QOK">
+                                                    <rect key="frame" x="155" y="33" width="200" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="5Uu-fV-rLa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="14"/>
+                                                    <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKK-Az-aqf">
-                                                    <rect key="frame" x="141" y="86" width="62" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="directorName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKK-Az-aqf">
+                                                    <rect key="frame" x="155" y="84" width="200" height="23.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ZXA-oe-v7t"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBM-xM-Rvx">
-                                                    <rect key="frame" x="141" y="131" width="98" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="releaseDate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBM-xM-Rvx">
+                                                    <rect key="frame" x="155" y="121.5" width="200" height="35.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="xfm-3D-52z"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="16"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDirector" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNY-Y0-88M">
-                                                    <rect key="frame" x="141" y="65" width="98" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelDirector" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNY-Y0-88M">
+                                                    <rect key="frame" x="155" y="67" width="200" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Ga0-tI-fzP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="14"/>
+                                                    <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelRelease" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4E-Sm-Xxa">
-                                                    <rect key="frame" x="141" y="112.5" width="96" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelRelease" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4E-Sm-Xxa">
+                                                    <rect key="frame" x="155" y="115.5" width="200" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Vw0-kY-fF2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="14"/>
+                                                    <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" id="1Ke-WO-jF6"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x4E-Sm-Xxa" secondAttribute="trailing" constant="20" symbolic="YES" id="462-La-RMd"/>
-                                                <constraint firstItem="h3W-rY-1qm" firstAttribute="top" secondItem="eXe-n4-Ptt" secondAttribute="topMargin" id="6xH-cc-Z4z"/>
-                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" symbolic="YES" id="7cK-Zx-lBk"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h3W-rY-1qm" secondAttribute="trailing" constant="20" symbolic="YES" id="7p7-wj-pmE"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kBM-xM-Rvx" secondAttribute="trailing" constant="20" symbolic="YES" id="9iK-jW-bme"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="kBM-xM-Rvx" secondAttribute="bottom" constant="3" id="AeG-wi-cvz"/>
-                                                <constraint firstItem="swY-K3-QOK" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" id="B96-bI-mwx"/>
-                                                <constraint firstItem="sFr-J8-kni" firstAttribute="top" secondItem="eXe-n4-Ptt" secondAttribute="top" constant="9" id="D1i-6c-R1a"/>
-                                                <constraint firstItem="kBM-xM-Rvx" firstAttribute="top" secondItem="cKK-Az-aqf" secondAttribute="bottom" constant="24" id="FvU-LQ-Tm2"/>
-                                                <constraint firstItem="sFr-J8-kni" firstAttribute="leading" secondItem="eXe-n4-Ptt" secondAttribute="leading" constant="16" id="GEf-dS-Mjc"/>
-                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" id="GHH-N3-MnS"/>
-                                                <constraint firstItem="cNY-Y0-88M" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" id="HVW-q1-GR6"/>
-                                                <constraint firstItem="h3W-rY-1qm" firstAttribute="leading" secondItem="swY-K3-QOK" secondAttribute="leading" id="LOF-sH-ENg"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="swY-K3-QOK" secondAttribute="trailing" constant="20" symbolic="YES" id="LvY-7e-edy"/>
-                                                <constraint firstItem="swY-K3-QOK" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" symbolic="YES" id="M4t-Wk-OsU"/>
-                                                <constraint firstItem="x4E-Sm-Xxa" firstAttribute="top" secondItem="h3W-rY-1qm" secondAttribute="bottom" constant="80.5" id="Py3-qR-W72"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="swY-K3-QOK" secondAttribute="bottom" constant="104" id="T4D-XV-cSI"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cNY-Y0-88M" secondAttribute="trailing" constant="20" symbolic="YES" id="Wkr-5N-3fY"/>
-                                                <constraint firstItem="swY-K3-QOK" firstAttribute="top" secondItem="eXe-n4-Ptt" secondAttribute="topMargin" constant="19" id="XDb-No-4XG"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="x4E-Sm-Xxa" secondAttribute="bottom" constant="21.5" id="Xia-Pr-ql1"/>
-                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="top" secondItem="cNY-Y0-88M" secondAttribute="bottom" id="Zep-X7-lip"/>
-                                                <constraint firstAttribute="bottom" secondItem="sFr-J8-kni" secondAttribute="bottom" constant="8" id="cru-du-Drd"/>
-                                                <constraint firstItem="swY-K3-QOK" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" id="j9F-eq-Xnr"/>
-                                                <constraint firstItem="kBM-xM-Rvx" firstAttribute="top" secondItem="swY-K3-QOK" secondAttribute="bottom" constant="80" id="mPZ-zL-dlP"/>
-                                                <constraint firstItem="x4E-Sm-Xxa" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" id="qM8-MY-v7z"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cKK-Az-aqf" secondAttribute="trailing" constant="20" symbolic="YES" id="sLH-Bf-Gz9"/>
-                                                <constraint firstItem="cNY-Y0-88M" firstAttribute="top" secondItem="h3W-rY-1qm" secondAttribute="bottom" constant="33" id="utB-H9-frd"/>
-                                                <constraint firstItem="kBM-xM-Rvx" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" id="xyE-rR-6p1"/>
+                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="22" id="28r-MA-Xg6"/>
+                                                <constraint firstItem="x4E-Sm-Xxa" firstAttribute="top" secondItem="cKK-Az-aqf" secondAttribute="bottom" constant="8" id="2Cx-hQ-uX3"/>
+                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="top" secondItem="cNY-Y0-88M" secondAttribute="bottom" constant="-7" id="6El-SX-fMT"/>
+                                                <constraint firstItem="sFr-J8-kni" firstAttribute="leading" secondItem="eXe-n4-Ptt" secondAttribute="leading" constant="32" id="8wv-Uy-M2a"/>
+                                                <constraint firstItem="kBM-xM-Rvx" firstAttribute="top" secondItem="cKK-Az-aqf" secondAttribute="bottom" constant="14" id="A7M-OA-lSV"/>
+                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="swY-K3-QOK" secondAttribute="leading" id="AcM-1K-TlP"/>
+                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cNY-Y0-88M" secondAttribute="leading" id="E6C-4M-9JH"/>
+                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" secondItem="x4E-Sm-Xxa" secondAttribute="leading" id="FH1-WW-pax"/>
+                                                <constraint firstAttribute="trailing" secondItem="kBM-xM-Rvx" secondAttribute="trailing" constant="59" id="M4L-Mo-2qH"/>
+                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" symbolic="YES" id="ME0-MB-zVa"/>
+                                                <constraint firstItem="swY-K3-QOK" firstAttribute="top" secondItem="eXe-n4-Ptt" secondAttribute="topMargin" constant="22" id="Obf-4Q-EmU"/>
+                                                <constraint firstAttribute="trailing" secondItem="swY-K3-QOK" secondAttribute="trailing" constant="59" id="POL-Dv-yI5"/>
+                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kBM-xM-Rvx" secondAttribute="leading" id="SeS-iw-eke"/>
+                                                <constraint firstItem="cNY-Y0-88M" firstAttribute="top" secondItem="h3W-rY-1qm" secondAttribute="bottom" constant="30" id="Txc-fM-WJh"/>
+                                                <constraint firstItem="sFr-J8-kni" firstAttribute="top" secondItem="eXe-n4-Ptt" secondAttribute="top" constant="9" id="Y7x-Xp-vv7"/>
+                                                <constraint firstAttribute="trailing" secondItem="x4E-Sm-Xxa" secondAttribute="trailing" constant="59" id="aII-Ob-wcD"/>
+                                                <constraint firstItem="cNY-Y0-88M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" symbolic="YES" id="b58-hC-8fg"/>
+                                                <constraint firstAttribute="bottom" secondItem="sFr-J8-kni" secondAttribute="bottom" constant="9" id="czO-gN-pmx"/>
+                                                <constraint firstItem="cKK-Az-aqf" firstAttribute="top" secondItem="cNY-Y0-88M" secondAttribute="bottom" constant="-7" id="dQ5-Vz-vBH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="x4E-Sm-Xxa" secondAttribute="bottom" constant="20.5" id="fwX-KV-cq1"/>
+                                                <constraint firstItem="h3W-rY-1qm" firstAttribute="leading" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="21" id="gPg-ac-sKg"/>
+                                                <constraint firstItem="kBM-xM-Rvx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sFr-J8-kni" secondAttribute="trailing" symbolic="YES" id="gl5-nr-sf6"/>
+                                                <constraint firstItem="kBM-xM-Rvx" firstAttribute="bottom" secondItem="eXe-n4-Ptt" secondAttribute="bottomMargin" constant="2" id="hSu-Tm-yn0"/>
+                                                <constraint firstItem="h3W-rY-1qm" firstAttribute="top" secondItem="eXe-n4-Ptt" secondAttribute="top" constant="8" id="jEb-9p-X5I"/>
+                                                <constraint firstItem="swY-K3-QOK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" symbolic="YES" id="n9u-8B-nGp"/>
+                                                <constraint firstItem="h3W-rY-1qm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sFr-J8-kni" secondAttribute="trailing" constant="8" symbolic="YES" id="ng6-um-kWN"/>
+                                                <constraint firstAttribute="trailing" secondItem="cNY-Y0-88M" secondAttribute="trailing" constant="59" id="o2E-UF-12E"/>
+                                                <constraint firstItem="x4E-Sm-Xxa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sFr-J8-kni" secondAttribute="trailing" symbolic="YES" id="ofa-Di-n32"/>
+                                                <constraint firstAttribute="trailing" secondItem="h3W-rY-1qm" secondAttribute="trailing" constant="20" id="p7N-aX-9YI"/>
+                                                <constraint firstAttribute="trailing" secondItem="cKK-Az-aqf" secondAttribute="trailing" constant="59" id="qGj-v4-iPx"/>
+                                                <constraint firstItem="cNY-Y0-88M" firstAttribute="top" secondItem="swY-K3-QOK" secondAttribute="bottom" constant="15" id="x0q-du-k69"/>
+                                                <constraint firstItem="cNY-Y0-88M" firstAttribute="top" secondItem="swY-K3-QOK" secondAttribute="bottom" constant="15" id="xgH-y1-kPE"/>
+                                                <constraint firstItem="x4E-Sm-Xxa" firstAttribute="top" secondItem="cKK-Az-aqf" secondAttribute="bottom" constant="8" id="zHP-N4-YuD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="tableViewCellDirector" destination="cKK-Az-aqf" id="XIA-Qp-mX6"/>
-                                            <outlet property="tableViewCellImage" destination="sFr-J8-kni" id="766-5l-bht"/>
-                                            <outlet property="tableViewCellRelease" destination="kBM-xM-Rvx" id="ZVT-T1-jUj"/>
-                                            <outlet property="tableViewCellSubtitle" destination="swY-K3-QOK" id="kKB-Oz-Rgy"/>
-                                            <outlet property="tableViewCellTitle" destination="h3W-rY-1qm" id="e9M-mH-sUR"/>
-                                            <outlet property="tableViewDirectorLabel" destination="cNY-Y0-88M" id="Yb0-yU-JKs"/>
-                                            <outlet property="tableViewReleaseLabel" destination="x4E-Sm-Xxa" id="cgc-GB-NDL"/>
+                                            <outlet property="tableViewCellDirector" destination="cKK-Az-aqf" id="uIn-Y0-KeA"/>
+                                            <outlet property="tableViewCellImage" destination="sFr-J8-kni" id="G5R-zx-eG1"/>
+                                            <outlet property="tableViewCellRelease" destination="kBM-xM-Rvx" id="FpV-aZ-qiN"/>
+                                            <outlet property="tableViewCellSubtitle" destination="swY-K3-QOK" id="R6X-H3-zm9"/>
+                                            <outlet property="tableViewCellTitle" destination="h3W-rY-1qm" id="HYm-7Q-aiB"/>
+                                            <outlet property="tableViewDirectorLabel" destination="cNY-Y0-88M" id="OFU-lz-CP5"/>
+                                            <outlet property="tableViewReleaseLabel" destination="x4E-Sm-Xxa" id="MYc-kV-qOx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -145,46 +171,186 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="moviesTableView" destination="6jK-zR-eNt" id="3ma-gj-Kn3"/>
-                        <segue destination="4Hj-OO-V65" kind="show" identifier="nextViewController" id="Xnp-4w-SmK"/>
+                        <segue destination="4Hj-OO-V65" kind="show" identifier="ShowDetailsViewController" id="pJY-SI-sCV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Details View Controller-->
         <scene sceneID="CoH-fP-FDq">
             <objects>
-                <viewController id="4Hj-OO-V65" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowDetailsViewController" id="4Hj-OO-V65" customClass="ShowDetailsViewController" customModule="StarWarsGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aym-ou-pug">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-vX-LJJ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLr-9j-L7v">
+                                        <rect key="frame" x="107" y="11" width="200" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Unu-RP-L60"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="26"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF3-cv-Psk">
+                                        <rect key="frame" x="107" y="43" width="200" height="24.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="pkx-Kq-IJ2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="18"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="directorLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-mg-R5w">
+                                        <rect key="frame" x="24" y="109" width="78" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="78" id="CVv-uc-r7o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="14"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="directorName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knX-O0-DPc">
+                                        <rect key="frame" x="24" y="125.5" width="170" height="23.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="WSp-mv-uJ1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="producerLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y4-zJ-st0">
+                                        <rect key="frame" x="25" y="160" width="170" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="Znx-Fp-6a6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="14"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="producerName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xp-6U-lfe">
+                                        <rect key="frame" x="24" y="180" width="283" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="283" id="XuZ-yU-tfe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="releaseLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmP-PM-E2c">
+                                        <rect key="frame" x="25" y="218" width="170" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="gXN-dK-Nv4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="14"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="releaseDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh4-uX-PDo">
+                                        <rect key="frame" x="24" y="234" width="170" height="23.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="J8b-9Q-wXa"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="zeM-hh-6oD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="openingText" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-Kb-DDb">
+                                        <rect key="frame" x="25.5" y="325" width="90.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="openingLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19v-YB-Bbu">
+                                        <rect key="frame" x="25" y="302" width="80.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="14"/>
+                                        <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tHc-bW-tJN">
+                                        <rect key="frame" x="203" y="193" width="187" height="337"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="337" id="iE1-Q3-7dF"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="19v-YB-Bbu" firstAttribute="leading" secondItem="WmP-PM-E2c" secondAttribute="leading" id="1le-9W-OvV"/>
+                                    <constraint firstItem="Jh4-uX-PDo" firstAttribute="leading" secondItem="knX-O0-DPc" secondAttribute="leading" id="3Ar-bd-VCX"/>
+                                    <constraint firstItem="WmP-PM-E2c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uEh-vX-LJJ" secondAttribute="leading" constant="20" symbolic="YES" id="6HH-TJ-Dd7"/>
+                                    <constraint firstItem="tHc-bW-tJN" firstAttribute="top" secondItem="q5k-mg-R5w" secondAttribute="bottom" constant="65" id="7hh-94-Dpt"/>
+                                    <constraint firstItem="19v-YB-Bbu" firstAttribute="top" secondItem="Jh4-uX-PDo" secondAttribute="bottom" constant="44.5" id="9t6-6i-crp"/>
+                                    <constraint firstItem="3xp-6U-lfe" firstAttribute="leading" secondItem="uEh-vX-LJJ" secondAttribute="leading" constant="24" id="Ce6-MF-a2j"/>
+                                    <constraint firstItem="q5k-mg-R5w" firstAttribute="leading" secondItem="uEh-vX-LJJ" secondAttribute="leading" constant="24" id="EFb-zd-oIN"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="knX-O0-DPc" secondAttribute="trailing" id="GTI-Ni-h6L"/>
+                                    <constraint firstItem="WmP-PM-E2c" firstAttribute="top" secondItem="3xp-6U-lfe" secondAttribute="bottom" constant="16" id="Gud-lh-zLE"/>
+                                    <constraint firstItem="tHc-bW-tJN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WmP-PM-E2c" secondAttribute="trailing" constant="8" symbolic="YES" id="HOV-r7-ncF"/>
+                                    <constraint firstItem="3xp-6U-lfe" firstAttribute="top" secondItem="5Y4-zJ-st0" secondAttribute="bottom" constant="1" id="Ijr-hb-QZx"/>
+                                    <constraint firstItem="5Y4-zJ-st0" firstAttribute="top" secondItem="knX-O0-DPc" secondAttribute="bottom" constant="11" id="KWU-CQ-1qi"/>
+                                    <constraint firstItem="tHc-bW-tJN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="19v-YB-Bbu" secondAttribute="trailing" constant="8" symbolic="YES" id="MQm-7c-eYR"/>
+                                    <constraint firstItem="Jh4-uX-PDo" firstAttribute="top" secondItem="3xp-6U-lfe" secondAttribute="bottom" constant="32" id="Nmc-dd-EBS"/>
+                                    <constraint firstItem="19v-YB-Bbu" firstAttribute="leading" secondItem="5Y4-zJ-st0" secondAttribute="leading" id="S0p-Zj-Dnl"/>
+                                    <constraint firstItem="knX-O0-DPc" firstAttribute="leading" secondItem="uEh-vX-LJJ" secondAttribute="leading" constant="24" id="ShL-tg-vbf"/>
+                                    <constraint firstItem="OLr-9j-L7v" firstAttribute="centerX" secondItem="zF3-cv-Psk" secondAttribute="centerX" id="T5n-Fk-12m"/>
+                                    <constraint firstItem="knX-O0-DPc" firstAttribute="top" secondItem="zF3-cv-Psk" secondAttribute="bottom" constant="58" id="TGM-Um-kN1"/>
+                                    <constraint firstItem="zF3-cv-Psk" firstAttribute="centerX" secondItem="uEh-vX-LJJ" secondAttribute="centerX" id="UGN-br-4AF"/>
+                                    <constraint firstItem="OLr-9j-L7v" firstAttribute="centerX" secondItem="uEh-vX-LJJ" secondAttribute="centerX" id="UjI-36-iJw"/>
+                                    <constraint firstItem="q5k-mg-R5w" firstAttribute="top" secondItem="OLr-9j-L7v" secondAttribute="bottom" constant="62.5" id="V4h-fr-QTd"/>
+                                    <constraint firstItem="5Y4-zJ-st0" firstAttribute="top" secondItem="uEh-vX-LJJ" secondAttribute="top" constant="160" id="Vpn-pc-XFc"/>
+                                    <constraint firstItem="WmP-PM-E2c" firstAttribute="top" secondItem="5Y4-zJ-st0" secondAttribute="bottom" constant="39" id="dW4-1q-oyz"/>
+                                    <constraint firstItem="5Y4-zJ-st0" firstAttribute="leading" secondItem="uEh-vX-LJJ" secondAttribute="leading" constant="25" id="eQc-9L-vme"/>
+                                    <constraint firstAttribute="trailing" secondItem="tHc-bW-tJN" secondAttribute="trailing" constant="24" id="hI6-Sf-g4w"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Y4-zJ-st0" secondAttribute="trailing" constant="20" symbolic="YES" id="ks8-kD-Htf"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q5k-mg-R5w" secondAttribute="trailing" id="l5H-JO-9F6"/>
+                                    <constraint firstItem="q5k-mg-R5w" firstAttribute="top" secondItem="zF3-cv-Psk" secondAttribute="bottom" constant="41.5" id="lpy-1B-1D9"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3xp-6U-lfe" secondAttribute="trailing" constant="20" symbolic="YES" id="lre-PX-b4L"/>
+                                    <constraint firstItem="SdX-Kb-DDb" firstAttribute="leading" secondItem="uEh-vX-LJJ" secondAttribute="leading" constant="25.5" id="nYm-e1-poW"/>
+                                    <constraint firstItem="tHc-bW-tJN" firstAttribute="leading" secondItem="Jh4-uX-PDo" secondAttribute="trailing" constant="9" id="wWO-tU-00P"/>
+                                    <constraint firstItem="tHc-bW-tJN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SdX-Kb-DDb" secondAttribute="trailing" constant="8" symbolic="YES" id="yb1-CL-rlx"/>
+                                    <constraint firstItem="SdX-Kb-DDb" firstAttribute="top" secondItem="19v-YB-Bbu" secondAttribute="bottom" constant="4" id="zhk-VE-UpY"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rVs-LI-hx3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="trailing" secondItem="rVs-LI-hx3" secondAttribute="trailing" id="3zC-so-YfC"/>
-                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="top" secondItem="rVs-LI-hx3" secondAttribute="top" id="A8B-l4-7z0"/>
-                            <constraint firstAttribute="bottom" secondItem="uEh-vX-LJJ" secondAttribute="bottom" id="EYS-CI-31p"/>
-                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="leading" secondItem="rVs-LI-hx3" secondAttribute="leading" id="pAv-59-Cy3"/>
+                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="leading" secondItem="rVs-LI-hx3" secondAttribute="leading" id="0jf-m0-nsQ"/>
+                            <constraint firstAttribute="bottom" secondItem="uEh-vX-LJJ" secondAttribute="bottom" id="888-8a-WU1"/>
+                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="trailing" secondItem="rVs-LI-hx3" secondAttribute="trailing" id="Lj8-m3-JRy"/>
+                            <constraint firstItem="uEh-vX-LJJ" firstAttribute="top" secondItem="Aym-ou-pug" secondAttribute="top" constant="88" id="TY7-Fr-UVB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nda-Dy-QCM"/>
+                    <connections>
+                        <outlet property="showDetailDirectorLabel" destination="q5k-mg-R5w" id="Y9d-dZ-K4V"/>
+                        <outlet property="showDetailOpeningLabel" destination="19v-YB-Bbu" id="kgr-ib-Qwu"/>
+                        <outlet property="showDetailProducerLabel" destination="5Y4-zJ-st0" id="USo-fP-Aoj"/>
+                        <outlet property="showDetailReleaseLabel" destination="WmP-PM-E2c" id="ocU-Uj-Obv"/>
+                        <outlet property="showDetailViewBackGroundImage" destination="tHc-bW-tJN" id="g96-y0-dJc"/>
+                        <outlet property="showDetailViewDirector" destination="knX-O0-DPc" id="UV3-Zx-eg2"/>
+                        <outlet property="showDetailViewOpening" destination="SdX-Kb-DDb" id="94K-uJ-zaY"/>
+                        <outlet property="showDetailViewProducer" destination="3xp-6U-lfe" id="4e8-hh-uPP"/>
+                        <outlet property="showDetailViewRelease" destination="Jh4-uX-PDo" id="w6G-Q2-QXM"/>
+                        <outlet property="showDetailViewSubtitle" destination="zF3-cv-Psk" id="3rn-K0-OWv"/>
+                        <outlet property="showDetailViewTitle" destination="OLr-9j-L7v" id="5ST-Ks-pjA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Uf-Qw-6kg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857.97101449275374" y="81.696428571428569"/>
+            <point key="canvasLocation" x="808.69565217391312" y="81.696428571428569"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <systemColor name="placeholderTextColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
